@@ -14,6 +14,11 @@ function App() {
     }
   };
 
+  /*const referer =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:5173'
+    : 'https://ai-todo-list-4dmuymp6p-enrique-israel-torres-mendozas-projects.vercel.app';*/
+
   const suggestTask = async () => {
     setLoading(true);
     try {
@@ -34,9 +39,9 @@ function App() {
         },
         {
           headers: {
-            Authorization: 'Bearer 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',
+            Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
             'Content-Type': 'application/json',
-            'HTTP-Referer': 'http://localhost:5173', // URL final del proyecto
+            'HTTP-Referer': 'https://ai-todo-list-4dmuymp6p-enrique-israel-torres-mendozas-projects.vercel.app', // URL final del proyecto
             'X-Title': 'AI To-Do List',
           },
         }
