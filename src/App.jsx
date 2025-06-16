@@ -49,7 +49,11 @@ function App() {
       const suggestion = response.data.choices[0].message.content;
       setTasks([...tasks, suggestion]);
     } catch (error) {
-      alert('Error al obtener sugerencia: ' + error.message);
+      if (error.response && error.response.status === 401) {
+        alert("⚠️ La API Key parece haber expirado o es inválida.");
+      } else {
+        alert("Error al obtener sugerencia: " + error.message);
+      }
     }
     setLoading(false);
     setInput('');
