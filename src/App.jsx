@@ -54,6 +54,8 @@ function App() {
     }
     setLoading(false);
     setInput('');
+
+    console.log('API Key:', import.meta.env.VITE_OPENROUTER_API_KEY);
   };
 
   return (
