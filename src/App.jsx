@@ -41,7 +41,7 @@ function App() {
           headers: {
             Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
             'Content-Type': 'application/json',
-            'HTTP-Referer': 'https://ai-todo-list-4dmuymp6p-enrique-israel-torres-mendozas-projects.vercel.app', // URL final del proyecto
+            'HTTP-Referer': 'https://ai-todo-list-nu.vercel.app/', // URL final del proyecto
             'X-Title': 'AI To-Do List',
           },
         }
